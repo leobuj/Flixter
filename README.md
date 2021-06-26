@@ -30,22 +30,27 @@ The following **additional** features are planned to be implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='walkthroughPortrait.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<img src='walkthroughLandscape.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Second app ever, first time using APIs. API's are incrediblty interesting and powerful.
+Still not super well versed in Java, but getting better.
 
 ## Open-source libraries used
 
 - [Android Async HTTP](https://github.com/loopj/android-async-http) - Simple asynchronous HTTP requests with JSON parsing
 - [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
+- [YouTube](https://hackmd.io/@qoEusk2FR0SJB-Q7Rsv-CQ/B1qdwxRGb?type=view) - YouTube library for streaming
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2021] [Leonardo Bujanda Carmona]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
