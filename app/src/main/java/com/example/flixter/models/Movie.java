@@ -23,6 +23,7 @@ public class Movie {
     String title;
     String release_date;
     Double voteAverage;
+    Integer id;
 
     public Movie(JSONObject jsonObject) throws JSONException {
         backdropPath = jsonObject.getString("backdrop_path");
@@ -31,6 +32,7 @@ public class Movie {
         overview = jsonObject.getString("overview");
         voteAverage = jsonObject.getDouble("vote_average");
         release_date = jsonObject.getString("release_date");
+        id = jsonObject.getInt("id");
     }
 
     public Movie(){
@@ -71,5 +73,9 @@ public class Movie {
     //release date
     public String getDate(){
         return release_date;
+    }
+
+    public Integer getId(){
+        return id;
     }
 }

@@ -45,13 +45,14 @@
         android:layout_marginTop="272dp"
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
+        android:ellipsize="end"
         android:lineSpacingExtra="3sp"
+        android:maxLines="10"
+        android:scrollbars="vertical"
         android:shadowColor="#E3CACA"
         android:text="TextView"
         android:textColor="#F1ECEC"
-        android:textSize="18sp"
-        android:scrollbars = "vertical"
-        />
+        android:textSize="18sp" />
 
     <RatingBar
         android:id="@+id/rbVoteAverage"

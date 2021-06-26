@@ -1,8 +1,10 @@
 package com.example.flixter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -40,7 +42,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         rbVoteAverage = (RatingBar) findViewById(R.id.rbVoteAverage);
         detailsPoster = (ImageView) findViewById(R.id.detailsPoster);
         iconMovie = (ImageView) findViewById(R.id.imageView3);
-    release_date = (TextView) findViewById(R.id.releaseDate);
+        release_date = (TextView) findViewById(R.id.releaseDate);
 
         // unwrap the movie passed via intent using its simple name as key
         movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));
@@ -51,6 +53,19 @@ public class MovieDetailsActivity extends AppCompatActivity {
         tvOverview.setText(movie.getOverview());
         tvOverview.setMovementMethod(new ScrollingMovementMethod());        // Allows text to be scrollable
         release_date.setText(movie.getDate());
+
+        ////////////
+        detailsPoster.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent creates the "tunnel connection" between MVD and MTA
+                Intent i = new Intent(MovieDetailsActivity.this, MovieTrailerActivity.class);
+                // Intent contains an integer by the name of "movieid"
+                i.putExtra("movieid", movie.getId());
+                // Starts the activity at the end of the tunnel
+                startActivity(i);
+            }
+        });
 
         int radius = 30;
         int margin = 5;
